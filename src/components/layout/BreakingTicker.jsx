@@ -1,13 +1,12 @@
 export default function BreakingTicker({ items = [] }) {
-  const text = items
-    .slice(0, 8)
-    .map((i) => i.title)
-    .join("  •  ");
+  const text = items.map((i) => i.title).join("  •  ");
+
   return (
     <div className="breaking">
-      <span className="label">Breaking News</span>
-      <div className="marquee">
-        <div className="track">{text}</div>
+      <div className="breaking-label">Breaking News</div>
+
+      <div className="breaking-wrapper">
+        <div className="breaking-track">{text}</div>
       </div>
     </div>
   );

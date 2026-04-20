@@ -73,6 +73,48 @@
   font-size: 24px;
   cursor: pointer;
 }
+/* BREAKING NEWS BAR */
+.breaking {
+  display: flex;
+  align-items: center;
+  background: #d10000;
+  color: white;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+/* LEFT LABEL */
+.breaking-label {
+  background: black;
+  padding: 8px 14px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* SCROLL AREA */
+.breaking-wrapper {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+/* SCROLL TEXT */
+.breaking-track {
+  white-space: nowrap;
+  display: inline-block;
+  padding-left: 100%;
+  animation: scrollText 20s linear infinite;
+}
+
+/* ANIMATION */
+@keyframes scrollText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
 /* MOBILE FIX */
 @media (max-width: 768px) {
