@@ -1,7 +1,14 @@
-import React from "react";
+import NewsCard from "./NewsCard";
 
-function CategorySection() {
-  return <div>CategorySection</div>;
+export default function CategorySection({ title, articles = [] }) {
+  return (
+    <section className="category">
+      <h2>{title.toUpperCase()}</h2>
+      <div className="grid">
+        {articles.slice(0, 6).map((a, i) => (
+          <NewsCard key={i} item={a} />
+        ))}
+      </div>
+    </section>
+  );
 }
-
-export default CategorySection;

@@ -1,7 +1,24 @@
-import React from "react";
+const items = [
+  "Home",
+  "International",
+  "Business",
+  "Politics",
+  "Technology",
+  "Sports",
+];
 
-function Navbar() {
-  return <div>Navbar</div>;
+export default function Navbar() {
+  return (
+    <nav className="navbar">
+      <div className="menu">☰</div>
+      <div className="nav-links">
+        {items.map((i) => (
+          <a key={i} href="#">
+            {i}
+          </a>
+        ))}
+      </div>
+      <div className="nav-date">{new Date().toDateString()}</div>
+    </nav>
+  );
 }
-
-export default Navbar;

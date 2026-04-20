@@ -1,7 +1,2 @@
-import React from "react";
-
-function truncateText() {
-  return <div>truncateText</div>;
-}
-
-export default truncateText;
+export const truncate = (text = "", n = 100) =>
+  text.length > n ? text.slice(0, n) + "..." : text;
