@@ -7,12 +7,12 @@ export default function NewspaperCategory({ title, articles }) {
 
       <div className="news-layout">
         <div className="left">
-          {articles.slice(0, 2).map((a, i) => (
+          {articles.slice(0, 3).map((a, i) => (
             <NewsCard key={i} item={a} />
           ))}
         </div>
 
-        <div className="center">
+        <div className="center big-news">
           <NewsCard item={articles[2]} large />
         </div>
 
