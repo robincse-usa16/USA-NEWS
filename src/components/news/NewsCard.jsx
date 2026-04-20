@@ -11,7 +11,6 @@ export default function NewsCard({ item, large }) {
       <img src={item.urlToImage} />
       <div className="content">
         <h3>{item.title}</h3>
-        {!large && <p>{item.description}</p>}
       </div>
     </div>
   );

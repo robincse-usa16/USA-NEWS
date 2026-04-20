@@ -55,3 +55,106 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 }
+/* SLIDER */
+.slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+}
+
+.slide-item {
+  min-width: 220px;
+}
+
+/* NAV MOBILE */
+.menu-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+/* DETAILS PAGE */
+.details-page {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .details-page {
+    display: block;
+  }
+}
+/* ROW SCROLL */
+.row-scroll {
+  display: flex;
+  overflow-x: scroll;
+  gap: 15px;
+  cursor: grab;
+}
+
+.row-item {
+  min-width: 220px;
+}
+
+/* NEWSPAPER */
+.news-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr 300px;
+  gap: 20px;
+}
+
+/* NAVBAR */
+.nav-center {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.menu-btn {
+  position: absolute;
+  left: 10px;
+  cursor: pointer;
+}
+
+/* SIDE MENU */
+.side-menu {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background: black;
+  color: white;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+/* IMAGE FIX */
+.news-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.news-card.large img {
+  height: 350px;
+}
