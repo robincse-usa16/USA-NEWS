@@ -6,8 +6,9 @@ export default function HeroSection({ articles = [] }) {
 
   return (
     <section className="hero">
-      <div className="left">
-        <h4>Recent News</h4>
+      {/* LEFT LIST */}
+      <div className="hero-left">
+        <h3>Recent News</h3>
         <ul>
           {articles.slice(0, 6).map((a, i) => (
             <li key={i}>{a.title}</li>
@@ -15,11 +16,13 @@ export default function HeroSection({ articles = [] }) {
         </ul>
       </div>
 
-      <div className="center">
-        <NewsCard item={main} large />
+      {/* CENTER MAIN */}
+      <div className="hero-center">
+        {main && <NewsCard item={main} large />}
       </div>
 
-      <div className="right">
+      {/* RIGHT SIDE */}
+      <div className="hero-right">
         {side.map((a, i) => (
           <NewsCard key={i} item={a} />
         ))}

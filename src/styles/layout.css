@@ -1,0 +1,51 @@
+/* TOPBAR */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e5e5e5;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.top-center {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #111;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* BREAKING */
+.breaking {
+  display: flex;
+  background: #c00;
+  color: white;
+  font-size: 14px;
+}
+
+.breaking .label {
+  background: black;
+  padding: 8px 12px;
+  font-weight: bold;
+}
+
+.track {
+  padding: 8px;
+}

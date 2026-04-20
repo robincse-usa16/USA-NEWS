@@ -1,0 +1,33 @@
+@media (max-width: 1024px) {
+  .container {
+    width: 95%;
+  }
+
+  .hero {
+    grid-template-columns: 200px 1fr;
+  }
+
+  .hero-right {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    display: block;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .topbar {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
