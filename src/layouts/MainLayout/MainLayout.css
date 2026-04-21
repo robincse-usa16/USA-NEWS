@@ -1,0 +1,26 @@
+.main-layout {
+  display: flex;
+  justify-content: center; /* 🔥 center everything */
+  gap: 20px;
+}
+
+.grid {
+  flex: 1;
+  max-width: 1000px; /* 🔥 আগে 800 ছিল → বড় করো */
+}
+
+.sidebar {
+  width: 300px;
+}
+.masonry {
+  display: flex;
+  margin-left: -16px;
+}
+
+.masonry > div {
+  padding-left: 16px;
+}
+
+.masonry > div > * {
+  margin-bottom: 16px;
+}

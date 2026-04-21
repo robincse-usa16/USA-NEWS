@@ -1,0 +1,5 @@
+.container {
+  max-width: 1500px; /* 🔥 আগে 1200 ছিল → এখন বড় */
+  margin: 0 auto;
+  padding: 0 12px; /* 🔥 side gap কম */
+}

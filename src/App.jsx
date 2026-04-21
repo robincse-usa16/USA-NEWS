@@ -1,15 +1,5 @@
-// src/routes/AppRoutes.jsx
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "../pages/Home";
-import NewsDetails from "../pages/NewsDetails";
+import Home from "./pages/Home/Home";
 
-export default function AppRoutes() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/news/:id" element={<NewsDetails />} />
-      </Routes>
-    </BrowserRouter>
-  );
+export default function App() {
+  return <Home />;
 }

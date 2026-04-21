@@ -1,0 +1,17 @@
+.small-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.small-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.small-card p {
+  padding: 10px;
+  font-size: 14px;
+}

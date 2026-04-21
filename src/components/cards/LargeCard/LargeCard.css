@@ -1,0 +1,17 @@
+.large-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.large-card img {
+  width: 100%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  color: white;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
