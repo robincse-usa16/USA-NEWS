@@ -6,7 +6,7 @@
 
 .grid {
   flex: 1;
-  max-width: 1000px; /* 🔥 আগে 800 ছিল → বড় করো */
+  max-width: 70%; /* 🔥 আগে 800 ছিল → বড় করো */
 }
 
 .sidebar {

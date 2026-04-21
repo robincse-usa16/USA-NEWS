@@ -1,29 +1,42 @@
 import "./Navbar.css";
-import { useState, useEffect } from "react";
+import Container from "../../common/Container/Container";
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScrolled(window.scrollY > 20);
-    });
-  }, []);
-
   return (
-    <div className={`navbar ${scrolled ? "scrolled" : ""}`}>
-      <div className="nav-left">
-        <div className="logo">MyNews</div>
-      </div>
+    <div className="navbar">
+      <Container>
+        <div className="nav-grid">
+          {/* LEFT */}
+          <div className="nav-left">
+            <div className="logo">USA NEWS</div>
+          </div>
 
-      <div className="nav-center">
-        <input placeholder="Search the web" />
-      </div>
+          {/* CENTER */}
+          <div className="nav-center">
+            <input placeholder="Search the web" />
+          </div>
 
-      <div className="nav-right">
-        <span>🌤 36°C</span>
-        <button className="icon-btn">⚙</button>
-        <button className="signin">Sign in</button>
+          {/* RIGHT */}
+          <div className="nav-right">
+            <span>🌤 35°C</span>
+            <button className="icon-btn">⚙</button>
+            <button className="signin">Sign in</button>
+          </div>
+        </div>
+      </Container>
+
+      {/* CATEGORY BAR */}
+      <div className="category-bar">
+        <Container>
+          <div className="category-container">
+            <span className="active">Discover</span>
+            <span>Sports</span>
+            <span>Play</span>
+            <span>Money</span>
+            <span>Weather</span>
+            <span>Watch</span>
+          </div>
+        </Container>
       </div>
     </div>
   );

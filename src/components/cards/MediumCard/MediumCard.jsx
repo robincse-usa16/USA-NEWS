@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./MediumCard.css";
 
 export default function MediumCard({ item }) {
-  const [likes, setLikes] = useState(100);
+  const [likes, setLikes] = useState(item.likes || 50);
   const [liked, setLiked] = useState(false);
 
   return (
@@ -18,11 +18,11 @@ export default function MediumCard({ item }) {
 
         <div className="actions">
           <button
-            className={`like ${liked ? "active" : ""}`}
             onClick={() => {
               setLiked(!liked);
               setLikes(liked ? likes - 1 : likes + 1);
             }}
+            className={`like ${liked ? "active" : ""}`}
           >
             👍 {likes}
           </button>
