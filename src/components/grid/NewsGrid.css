@@ -1,28 +1,22 @@
-.main-layout {
-  max-width: 1700px; /* 🔥 বড় container */
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-/* 🔥 GRID SYSTEM */
 .news-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 column */
+  grid-template-columns: repeat(5, 1fr);
   gap: 16px;
+  margin-top: 20px;
 }
 
-/* default */
+/* Default card */
 .grid-item {
   width: 100%;
 }
 
-/* 🔥 LARGE CARD = 2 column */
+/* Large card = 2 column span */
 .grid-item.large {
   grid-column: span 2;
 }
 
-/* 📱 Tablet */
-@media (max-width: 1200px) {
+/* 🔥 Tablet */
+@media (max-width: 1024px) {
   .news-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -32,7 +26,7 @@
   }
 }
 
-/* 📱 Mobile */
+/* 🔥 Mobile */
 @media (max-width: 768px) {
   .news-grid {
     grid-template-columns: repeat(2, 1fr);

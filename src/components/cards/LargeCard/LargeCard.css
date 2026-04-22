@@ -1,17 +1,70 @@
 .large-card {
   position: relative;
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
+  height: 280px;
 }
 
-.large-card img {
+/* IMAGE / VIDEO */
+.large-card img,
+.large-card video {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
+/* SLIDER */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* OVERLAY */
 .overlay {
   position: absolute;
   bottom: 0;
+  width: 100%;
+  padding: 16px;
   color: white;
-  padding: 15px;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.overlay h2 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* DOTS */
+.dots {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.dots span {
+  width: 8px;
+  height: 8px;
+  background: gray;
+  display: inline-block;
+  margin: 0 4px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dots .active {
+  background: white;
 }
